@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/ship.js":
+/*!*********************!*\
+  !*** ./src/ship.js ***!
+  \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   jestTest: () => (/* binding */ jestTest)\n/* harmony export */ });\nvar jestTest = function jestTest() {\n  return 'jest test';\n};\n\n//# sourceURL=webpack://battleship/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   ship: () => (/* binding */ ship)\n/* harmony export */ });\n/* eslint-disable */\n\nvar ship = function ship(length) {\n  return {\n    length: length,\n    hitArray: [],\n    hit: function hit(position) {\n      this.hitArray.push(position);\n    },\n    isSunk: function isSunk() {\n      if (this.hitArray.length === this.length) {\n        return true;\n      }\n      return false;\n    }\n  };\n};\n\n//# sourceURL=webpack://battleship/./src/ship.js?");
 
 /***/ })
 
@@ -60,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.js"](0, __webpack_exports__, __webpack_require__);
+/******/ 	__webpack_modules__["./src/ship.js"](0, __webpack_exports__, __webpack_require__);
 /******/ 	
 /******/ })()
 ;

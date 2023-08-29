@@ -1,3 +1,5 @@
-export const jestTest = () => {
-  return 'jest test'
-}
+// document.addEventListener('DOMContentLoaded', () => {
+//   const div = document.createElement('div');
+//   div.innerHTML = 'Hello World';
+//   document.body.appendChild(div);
+// })

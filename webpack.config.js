@@ -2,7 +2,13 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    ship: './src/ship.js',
+    gameboard: './src/gameboard.js',
+    player: './src/player.js',
+    game: './src/game.js',
+    index: './src/index.js'
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
@@ -13,7 +19,7 @@ module.exports = {
   mode: 'development',
 
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
 
