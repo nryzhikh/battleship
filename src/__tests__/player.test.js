@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 
-import {Player} from '../src/player.js'
+import {Player} from '../player.js'
 
 describe('Player', () => {
     it("should return an object", () => {
@@ -29,12 +29,10 @@ describe('Player', () => {
         const newPlayer = Player();
         const enemyGameboard = {
             receiveAttack: jest.fn()
-            }
-        for (let i = 0; i < 100; i++) {
-        newPlayer.makeRandomAttack(enemyGameboard);
-        }
-        const uniqueShots = Array.from(new Set(newPlayer.shotsFired.map(JSON.stringify)));
-        expect(uniqueShots.length).toEqual(newPlayer.shotsFired.length);
+            };
+        newPlayer.attack(enemyGameboard, {x: 1, y: 1});
+        newPlayer.attack(enemyGameboard, {x: 1, y: 1});
+        expect(newPlayer.shotsFired.length).toEqual(1);
     });
 
 })

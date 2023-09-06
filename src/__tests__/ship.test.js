@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 
-import { ship } from '../src/ship';
+import { ship } from '../ship';
 
 describe('ship', () => {
     it('should return an object', () => {

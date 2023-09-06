@@ -11,5 +11,7 @@ export const ship = (length) => ({
             return true;
         }
         return false;
-    }
+    },
+    isPlaced: false,
+    isHorizontal: true,
 });
